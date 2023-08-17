@@ -27,7 +27,7 @@ const convert = (value) => {
     const convertToRation = Object.entries(params).find(item => {
         return item[0] === state.inputObject.convertTo.trim()
     })?.[1]
-    const convertedValue =  state.inputObject.distance.value * originalRation / convertToRation
+    const convertedValue =  Number(state.inputObject.distance.value * originalRation / convertToRation).toFixed(2)
 
     state.outputObject = {
         unit: state.inputObject.convertTo,
